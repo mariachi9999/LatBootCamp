@@ -1,9 +1,16 @@
 export const serialize = (myObj) => {
-  for (const property in myObj) {
-    if (typeof myObj[property] === "bigint") {
-      myObj[property] = myObj[property].toString() + "n";
+  function analyze(myObj) {
+    for (const property in myObj) {
+      if (typeof myObj[property] === "bigint") {
+        myObj[property] = myObj[property].toString() + "n";
+      }
+      if (typeof myObj[property] === "object") {
+        analyze(myObj[property]);
+      }
     }
   }
+
+  analyze(myObj);
   return JSON.stringify(myObj);
 };
 
