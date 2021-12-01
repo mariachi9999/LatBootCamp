@@ -4,6 +4,9 @@
     "mocha": "^9.1.3"
   },
   "scripts": {
-    "test" : "mocha"
+    "test": "mocha"
+  },
+  "dependencies": {
+    "sinon": "^12.0.1"
   }
 }

@@ -36,8 +36,6 @@ describe("University Test", function () {
   it("check getAvailableDoctors returns doctors according time", async function () {
     let date = new Date().getHours();
     let available = await test_university.getAvailableDoctors();
-    console.log("san pedro", doctors_san_pedro.available);
-    console.log("los olivos", doctors_los_olivos.available);
 
     if (date > 19 && date < 8) {
       assert.equal(
