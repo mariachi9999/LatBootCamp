@@ -1,5 +1,7 @@
-export default class Lamp {
-  private status: boolean;
+import LampInterface from "./lampInterface";
+
+export default class Lamp implements LampInterface {
+  status: boolean;
 
   constructor() {}
 

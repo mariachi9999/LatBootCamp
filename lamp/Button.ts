@@ -1,7 +1,7 @@
-import Lamp from "./lamp";
+import LampInterface from "./lampInterface";
 
 export default class Button {
-  constructor(protected lamp: Lamp) {}
+  constructor(protected lamp: LampInterface) {}
 
   onButtonListener() {
     if (this.lamp.getStatus()) {
