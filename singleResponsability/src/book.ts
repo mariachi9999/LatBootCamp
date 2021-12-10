@@ -6,7 +6,6 @@ export default class Book {
         private year: number,
         private price: number,
         private isbn: string) {
-
     }
 
     getName() {
