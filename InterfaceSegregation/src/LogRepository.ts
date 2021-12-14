@@ -1,22 +1,10 @@
 import EventLog from "./eventLog";
+import getInterface from "./getInterface";
 import Repository from "./repository";
-import User from './user';
+import User from "./user";
 
-export default class LogRepository implements Repository<EventLog> {
-
-     insert(user: EventLog) {
-         //none
-     }
-
-    update(user: EventLog) {
-        //none
-    }
-
-    get(): EventLog {
-        return new EventLog('1', 'test message');
-    }
-
-    delete(id: string): void {
-        //none
-    }
+export default class LogRepository implements getInterface {
+  get(): EventLog {
+    return new EventLog("1", "test message");
+  }
 }
